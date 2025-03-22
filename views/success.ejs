@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödeme Başarılı 🎉</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script>
+        // 🎉 Konfeti Animasyonu İçin
+        function launchConfetti() {
+            const confettiContainer = document.createElement("div");
+            confettiContainer.classList.add("confetti-container");
+            document.body.appendChild(confettiContainer);
+
+            for (let i = 0; i < 100; i++) {
+                let confetti = document.createElement("div");
+                confetti.classList.add("confetti");
+                confetti.style.left = Math.random() * 100 + "vw";
+                confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
+                confettiContainer.appendChild(confetti);
+            }
+
+            setTimeout(() => {
+                confettiContainer.remove();
+            }, 5000);
+        }
+
+        window.onload = launchConfetti;
+    </script>
+</head>
+<body>
+<div class="success-container">
+    <div class="success-card">
+        <h1>🎉 Ödeme Başarılı!</h1>
+        <p>Satın alma işleminiz başarıyla tamamlandı. Teşekkür ederiz! 🚀</p>
+        <p>Ödeme detayları e-posta adresinize gönderildi.</p>
+        <a href="/" class="home-button">Alışverişe Devam Et</a>
+    </div>
+</div>
+</body>
+</html>
